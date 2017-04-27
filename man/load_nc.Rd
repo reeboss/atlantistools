@@ -30,10 +30,10 @@ functional groups (Only present in the sediment layer). The names have to match
 the column 'Name' in the 'functionalGroups.csv' file.}
 
 \item{select_groups}{Character vector of funtional groups which shall be read in.
-Names have to match the ones used in the ncdf file. Check column "Name" in
+Names have to match the ones used in the netcdf file. Check column "Name" in
 "functionalGroups.csv" for clarification.}
 
-\item{select_variable}{Character value spefifying which variable to load.
+\item{select_variable}{Character value specifying which variable to load.
 Only one variable of the options available (i.e., \code{c(
 "N", "Nums", "ResN", "StructN", "Eat", "Growth", "Prodn", "Grazing")
 }) can be loaded at a time.}
@@ -46,7 +46,7 @@ folder/filename string and set dir to 'NULL'.}
 \item{bboxes}{Integer vector giving the box-id of the boundary boxes.}
 
 \item{check_acronyms}{Logical testing if functional-groups in
-select_groups are inactive in the current model run. The will be omitted
+select_groups are inactive in the current model run. They will be omitted
 in the output.}
 
 \item{warn_zeros}{Logical indicating if check for actual zeros in the
