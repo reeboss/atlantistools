@@ -107,6 +107,7 @@ load_dietcheck <- function(dir = getwd(), dietcheck, fgs, prm_run, convert_names
   names(diet_long) <- tolower(names(diet_long))
 
   # Remove entries without spefific diet information
+  diet_long <- diet_long[!is.na(diet_long$atoutput), ]
   diet_long <- diet_long[diet_long$atoutput != 0, ]
 
   # Convert species codes to longnames!
