@@ -5,7 +5,7 @@
 \title{Function to plot relative contribution of biomass and numbers per cohort.}
 \usage{
 plot_bar(data, x = "time", y = "atoutput", fill = "species",
-  wrap = NULL, ncol = NULL)
+  wrap = NULL, ncol = NULL, width = 0.2)
 }
 \arguments{
 \item{data}{Dataframe to be plotted.}
