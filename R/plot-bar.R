@@ -21,7 +21,7 @@
 #' df <- agg_perc(preprocess$nums_age, groups = c("time", "species"))
 #' plot_bar(df, fill = "agecl", wrap = "species")
 
-plot_bar <- function(data, x = "time", y = "atoutput", fill = "species", wrap = NULL, ncol = NULL) {
+plot_bar <- function(data, x = "time", y = "atoutput", fill = "species", wrap = NULL, ncol = NULL, width = 0.2) {
   plot <- custom_map(data = data, x = x, y = y) +
     ggplot2::geom_bar(stat = "identity") +
     theme_atlantis()
@@ -39,7 +39,7 @@ plot_bar <- function(data, x = "time", y = "atoutput", fill = "species", wrap = 
   # Wrap in case wrap is not NULL!
   if (!is.null(wrap)) {
     if (is.null(ncol)) ncol <- 7  # set default if NULL
-    plot <- custom_wrap(plot, col = wrap, ncol = ncol)
+    plot <- custom_wrap(plot, col = wrap, ncol = ncol, width)
   }
 
   plot <- ggplot_custom(plot)
